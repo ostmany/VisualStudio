@@ -1,0 +1,77 @@
+﻿@model SysVYC.Models.PRODUCTO
+
+@{
+    ViewBag.Title = "Modificar";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Modificar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.IDPRODUCTO)
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Nombre del Producto</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NOMBREPRODUCTO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NOMBREPRODUCTO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Descripción</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DESCRIPCIONPRODUCTO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DESCRIPCIONPRODUCTO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Marca</label>
+            <div class="col-md-10">
+                @Html.DropDownList("IDMARCA", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IDMARCA, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Modelo</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MODELOPRODUCTO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MODELOPRODUCTO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Costo</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.COSTOPRODUCTO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.COSTOPRODUCTO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Precio</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PRECIOPRODUCTO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PRECIOPRODUCTO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar Modificaciones" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Regresar a la Lista", "Index", "", new { @class = "btn btn-primary" })
+</div>
