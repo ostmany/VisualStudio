@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0d670b9a1ac346f696b61c8176f80dac" Name="Diagram1">
+        <EntityTypeShape EntityType="SVYCModel.AJUSTEPRECIO" Width="1.5" PointX="13.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.CLIENTE" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.CREDITO" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.DEVOLUCION" Width="1.5" PointX="13.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.EMPLEADO" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.EMPRESA" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.ESTADOCREDITO" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.FACTURA" Width="1.5" PointX="8.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.FACTURAPRODUCTO" Width="1.5" PointX="13.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.FIADOR" Width="1.5" PointX="10.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.INVENTARIO" Width="1.5" PointX="13.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.MARCA" Width="1.5" PointX="9" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.PARAMETROS" Width="1.5" PointX="10.5" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.PRODUCTO" Width="1.5" PointX="11.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.PROMOCION" Width="1.5" PointX="13.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.REFERENCIACOMERCIAL" Width="1.5" PointX="7.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.REFERENCIAFINANCIERA" Width="1.5" PointX="7.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.REFERENCIAPERSONALFAMILIAR" Width="1.5" PointX="7.5" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.REGALIA" Width="1.5" PointX="13.5" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.REGISTROCREDITO" Width="1.5" PointX="7.5" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.TIPOCLIENTE" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.TIPODOCUMENTO" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.TIPOUSUARIO" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SVYCModel.USUARIO" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="SVYCModel.FK_AJUSTEPR_PRODUCTO__PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_CLIENTE_EMPRESA_C_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_CLIENTE_TIPOCLIEN_TIPOCLIE" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_CREDITO_CLIENTE_C_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_FACTURA_CLIENTE_F_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_FIADOR_CLIENTE_F_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_CREDITO_ESTADOCRE_ESTADOCR" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_CREDITO_FACTURA_C_FACTURA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_FIADOR_CREDITO_F_CREDITO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REFERENC_COMERCIAL_R_CREDITO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REFERENC_FINANCIERA_R_CREDITO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REFERENC_PERSONAL_R_CREDITO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REGISTRO_CREDITO_R_CREDITO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_DEVOLUCI_FACTURA_D_FACTURA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_DEVOLUCI_PRODUCTO__PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_FACTURA_EMPLEADO__EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_USUARIO_EMPLEADO__EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_FIADOR_EMPRESA_F_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REFERENC_EMPRESA_R_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_FACTURAP_FACTURA_F_FACTURA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REGALIA_FACTURA_R_FACTURA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_FACTURAP_PRODUCTO__PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_INVENTAR_PRODUCTO__PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_PRODUCTO_MARCA_PRO_MARCA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REGALIA_PRODUCTO__PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_REFERENC_TIPODOCUM_TIPODOCU" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.FK_USUARIO_TIPOUSUAR_TIPOUSUA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.PARAMETROS_FACTURA" ManuallyRouted="false" />
+        <AssociationConnector Association="SVYCModel.PRODUCTO_PROMOCION" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

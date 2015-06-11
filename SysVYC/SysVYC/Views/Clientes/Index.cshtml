@@ -1,0 +1,82 @@
+﻿@model IEnumerable<SysVYC.Models.CLIENTE>
+
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Clientes</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Cliente", "Create", "", new { @class="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            DUI
+        </th>
+        <th>
+            NIT
+        </th>
+        <th>
+            Dirección
+        </th>
+        <th>
+            Teléfono
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            Empresas
+        </th>
+        <th>
+            Tipo de Cliente
+        </th>
+        <th style="width:270px;"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRECLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDOCLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUICLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NITCLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCIONCLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONOCLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAILCLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPRESA.NOMBREEMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPOCLIENTE.TIPOCLIENTE1)
+        </td>
+        <td>
+            @Html.ActionLink("Modificar", "Edit", new { id = item.IDCLIENTE }, new {@class="btn btn-primary"})
+            @Html.ActionLink("Detalles", "Details", new { id = item.IDCLIENTE }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.IDCLIENTE }, new { @class = "btn btn-primary" })
+        </td>
+    </tr>
+}
+
+</table>

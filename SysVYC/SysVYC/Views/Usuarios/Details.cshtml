@@ -1,0 +1,42 @@
+﻿@model SysVYC.Models.USUARIO
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERNAME)
+        </dd>
+
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPLEADO.NOMBREEMPLEADO)
+        </dd>
+
+        <dt>
+            Tipo de Usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPOUSUARIO.TIPOUSUARIO1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Regresar a la Lista", "Index", "", new { @class = "btn btn-primary" })
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.IDUSUARIO }, new { @class = "btn btn-primary" })
+</p>
